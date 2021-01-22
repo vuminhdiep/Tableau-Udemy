@@ -1,0 +1,1596 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.20.1106.0321                               -->
+<workbook original-version='18.1' source-build='2020.4.0 (20204.20.1106.0321)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/G1Dashboards-InstructorWorkbook?rev=1.0' id='G1Dashboards-InstructorWorkbook' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource caption='browsers' inline='true' name='federated.0cd5cms1f1l1wc1g6jp8t18ogiat' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='browsers' name='textscan.01f4qro1w8j6mt1blnpnp1jg22nw'>
+            <connection class='textscan' directory='C:/Users/NC/Documents/My Tableau Repository/Workbooks/G1 Dashboards - Instructor Workbook.twb Files/var/folders/2n/wb73389152j5j4zkj43d7rl40000gn/T/tableau-temp/2857320355/Data/Instructor workbooks' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.01f4qro1w8j6mt1blnpnp1jg22nw' name='browsers.csv' table='[browsers#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='string' name='browser' ordinal='1' />
+            <column datatype='integer' name='visits' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.01f4qro1w8j6mt1blnpnp1jg22nw' name='browsers.csv' table='[browsers#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='string' name='browser' ordinal='1' />
+            <column datatype='integer' name='visits' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[browsers.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[browsers.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>browser</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[browser]</local-name>
+            <parent-name>[browsers.csv]</parent-name>
+            <remote-alias>browser</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visits</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[visits]</local-name>
+            <parent-name>[browsers.csv]</parent-name>
+            <remote-alias>visits</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column datatype='string' name='[browser (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[browser]' new-bin='true'>
+          <bin default-name='false' value='&quot;Other &quot;'>
+            <value>&quot;--ignore-ssl-errors=true&quot;</value>
+            <value>&quot;\&quot;Mozilla&quot;</value>
+            <value>&quot;(not set)&quot;</value>
+            <value>&quot;[FBAN&quot;</value>
+            <value>&quot;[object Promise] delve.ai website analyse&quot;</value>
+            <value>&quot;+Simple Browser&quot;</value>
+            <value>&quot;1207 Android mobile&quot;</value>
+            <value>&quot;AdobeAIR&quot;</value>
+            <value>&quot;Airbnb&quot;</value>
+            <value>&quot;Amazon Silk&quot;</value>
+            <value>&quot;Amazon.com&quot;</value>
+            <value>&quot;android&quot;</value>
+            <value>&quot;Android Browser&quot;</value>
+            <value>&quot;Android ExpediaBookings&quot;</value>
+            <value>&quot;Android Runtime&quot;</value>
+            <value>&quot;ANTHM-KSD&quot;</value>
+            <value>&quot;Autn-WKOOP&quot;</value>
+            <value>&quot;BestBuy&quot;</value>
+            <value>&quot;BestBuyOwn-iOS&quot;</value>
+            <value>&quot;bitdiscovery&quot;</value>
+            <value>&quot;BlackBerry&quot;</value>
+            <value>&quot;Bloomberg|Android|10|5.15.4.2098128.|1d73b8e092438b2d1f5a9d3525ec33cfd5999299&quot;</value>
+            <value>&quot;Bloomberg|Android|9|5.14.2.2016955.|3e4ea7b3c732cca10e10f83f7dccbdb767c9e3ce&quot;</value>
+            <value>&quot;Bloomberg|Android|9|5.15.4.2098128.|1d73b8e092438b2d1f5a9d3525ec33cfd5999299&quot;</value>
+            <value>&quot;Bloomberg|iOS|13.1.3|5.14.1|a99ce588ff373cade39a08f7c169d6208e33a235&quot;</value>
+            <value>&quot;Bloomberg|iOS|13.1.3|5.14.2|3e4ea7b3c732cca10e10f83f7dccbdb767c9e3ce&quot;</value>
+            <value>&quot;Bloomberg|iOS|13.2.3|5.14.2|3e4ea7b3c732cca10e10f83f7dccbdb767c9e3ce&quot;</value>
+            <value>&quot;Bloomberg|iOS|13.3|5.15.3|de49c0944352dcb5f199c36ea249f68412083de3&quot;</value>
+            <value>&quot;Bloomberg|iOS|13.3|5.15.4|1d73b8e092438b2d1f5a9d3525ec33cfd5999299&quot;</value>
+            <value>&quot;Bluebeam Revu Browser - cef version: 57.0.0.0&quot;</value>
+            <value>&quot;Box&quot;</value>
+            <value>&quot;Box Sync&quot;</value>
+            <value>&quot;C:&quot;</value>
+            <value>&quot;Camino&quot;</value>
+            <value>&quot;candroid&quot;</value>
+            <value>&quot;CareDroidMedications&quot;</value>
+            <value>&quot;Carousel&quot;</value>
+            <value>&quot;CBC&quot;</value>
+            <value>&quot;cnbc-native-mobile1.0-iPhone13.1.3&quot;</value>
+            <value>&quot;cnbc-native-mobile1.0-iPhone13.3&quot;</value>
+            <value>&quot;Coc Coc&quot;</value>
+            <value>&quot;com.airfind.browser&quot;</value>
+            <value>&quot;com.airfind.deltabrowser&quot;</value>
+            <value>&quot;com.box.android&quot;</value>
+            <value>&quot;com.doximity.doximitydroid&quot;</value>
+            <value>&quot;com.doximity.doximitydroid.x&quot;</value>
+            <value>&quot;com.seekingalpha.webwrapper&quot;</value>
+            <value>&quot;com.vk.vkclient&quot;</value>
+            <value>&quot;CyberCycloneBot&quot;</value>
+            <value>&quot;DDG-Android-3.1.0&quot;</value>
+            <value>&quot;Default&quot;</value>
+            <value>&quot;desktop&quot;</value>
+            <value>&quot;DingTalkBot-LinkService&quot;</value>
+            <value>&quot;DoximityWebView&quot;</value>
+            <value>&quot;Emb&quot;</value>
+            <value>&quot;Empty&quot;</value>
+            <value>&quot;eQAfy_Website_Checker_Bot_https:&quot;</value>
+            <value>&quot;fuelbot&quot;</value>
+            <value>&quot;GeenStijlAndroidApp&quot;</value>
+            <value>&quot;get-view:subscriber-info.get-view:subscriber-info-re-u-s-ogr.pldFcolpr&amp;[MnSIsdN]&quot;</value>
+            <value>&quot;Google-Test2&quot;</value>
+            <value>&quot;HCQA&quot;</value>
+            <value>&quot;Hexometer&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-9.2.0&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-9.2.1&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-9.3.0&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-8.6.0-Mozilla&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-9.2.0&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-9.2.1&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-9.3.0&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-9.3.0-Mozilla&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-8.6.0-Mozilla&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.2.0&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.2.1&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.2.1-Mozilla&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.3.0&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.3.0-Mozilla&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-9.2.1&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-9.3.0&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-FACEID-9.2.1&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-TOUCHID-9.2.1&quot;</value>
+            <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-TOUCHID-9.3.0&quot;</value>
+            <value>&quot;http:&quot;</value>
+            <value>&quot;https:&quot;</value>
+            <value>&quot;IE with Chrome Frame&quot;</value>
+            <value>&quot;iMozilla&quot;</value>
+            <value>&quot;Infowars Android&quot;</value>
+            <value>&quot;Instagram 113.0.0.28.122&quot;</value>
+            <value>&quot;Instagram 116.0.0.24.361&quot;</value>
+            <value>&quot;Instagram 117.0.0.23.163&quot;</value>
+            <value>&quot;Instagram 118.0.0.25.121&quot;</value>
+            <value>&quot;Instagram 119.0.0.25.146&quot;</value>
+            <value>&quot;Instagram 120.0.0.18.116&quot;</value>
+            <value>&quot;Instagram 121.0.0.18.122&quot;</value>
+            <value>&quot;Instagram 121.1.0.22.122&quot;</value>
+            <value>&quot;Instagram 122.1.0.16.239&quot;</value>
+            <value>&quot;Instagram 123.0.0.24.115&quot;</value>
+            <value>&quot;Instagram 123.1.0.26.115&quot;</value>
+            <value>&quot;Instagram 124.0.0.11.473&quot;</value>
+            <value>&quot;Instagram 125.0.0.18.125&quot;</value>
+            <value>&quot;Instagram 75.0.0.23.99&quot;</value>
+            <value>&quot;InstaRoyal&quot;</value>
+            <value>&quot;InteriaFakty&quot;</value>
+            <value>&quot;iPad&quot;</value>
+            <value>&quot;iPhone&quot;</value>
+            <value>&quot;iphone6s BingWeb&quot;</value>
+            <value>&quot;Iron&quot;</value>
+            <value>&quot;IRS - TRG19-01Loeim&quot;</value>
+            <value>&quot;KommersantApp&quot;</value>
+            <value>&quot;LeapPad3Explorer&quot;</value>
+            <value>&quot;LeapPadPlatinum&quot;</value>
+            <value>&quot;LeapPadUltimate&quot;</value>
+            <value>&quot;LG-B470&quot;</value>
+            <value>&quot;LIAuthLibrary:0.0.3 com.linkedin.android:4.1.388 LGE_LM-X210VPP:android_7.1.2&quot;</value>
+            <value>&quot;liip&quot;</value>
+            <value>&quot;liloiosapp-66.1.4 Mozilla&quot;</value>
+            <value>&quot;liloiosapp-66.1.5 Mozilla&quot;</value>
+            <value>&quot;liloiosapp-66.1.6 Mozilla&quot;</value>
+            <value>&quot;LINER&quot;</value>
+            <value>&quot;LiveSlides&quot;</value>
+            <value>&quot;Lore Document Collector 1bb1dbb613d0db2041e35f52fea672c7&quot;</value>
+            <value>&quot;Lore Document Collector 5a20b182ca368a24e6462a7ac6947051&quot;</value>
+            <value>&quot;Lunascape&quot;</value>
+            <value>&quot;MagentaNews&quot;</value>
+            <value>&quot;Maxthon&quot;</value>
+            <value>&quot;medical-lighter&quot;</value>
+            <value>&quot;MercadoLibre-Android&quot;</value>
+            <value>&quot;Mercari_d&quot;</value>
+            <value>&quot;mobile&quot;</value>
+            <value>&quot;Mobile IOS 9.0.1.1; Mozilla&quot;</value>
+            <value>&quot;mozilla&quot;</value>
+            <value>&quot;Mozilla&quot;</value>
+            <value>&quot;Mozilla Compatible Agent&quot;</value>
+            <value>&quot;Mozilla\\&quot;</value>
+            <value>&quot;MRCHROME&quot;</value>
+            <value>&quot;MUDV4&quot;</value>
+            <value>&quot;NE3&quot;</value>
+            <value>&quot;netdisk;2.2.2;pc;pc-mac;10.14.5;macbaiduyunguanjia&quot;</value>
+            <value>&quot;NetFront&quot;</value>
+            <value>&quot;Netscape&quot;</value>
+            <value>&quot;Netsparker Agent&quot;</value>
+            <value>&quot;NinjBot&quot;</value>
+            <value>&quot;Nintendo 3DS Browser&quot;</value>
+            <value>&quot;Nintendo Browser&quot;</value>
+            <value>&quot;Nokia Browser&quot;</value>
+            <value>&quot;One Drop Web Agent&quot;</value>
+            <value>&quot;Opendi Screenshot Bot bot@opendi.com&quot;</value>
+            <value>&quot;Opera&quot;</value>
+            <value>&quot;Opera Mini&quot;</value>
+            <value>&quot;osee2unifiedRelease&quot;</value>
+            <value>&quot;Outlook-iOS&quot;</value>
+            <value>&quot;pa11y&quot;</value>
+            <value>&quot;Papers&quot;</value>
+            <value>&quot;Papers2 Thumbnail Helper&quot;</value>
+            <value>&quot;PC&quot;</value>
+            <value>&quot;Playstation 3&quot;</value>
+            <value>&quot;Playstation 4&quot;</value>
+            <value>&quot;Playstation Vita Browser&quot;</value>
+            <value>&quot;Puffin&quot;</value>
+            <value>&quot;rsotaua 1.0&quot;</value>
+            <value>&quot;SeaMonkey&quot;</value>
+            <value>&quot;Selenium&quot;</value>
+            <value>&quot;Sephora 19.7&quot;</value>
+            <value>&quot;Sephora 19.7.1&quot;</value>
+            <value>&quot;Sephora 19.8&quot;</value>
+            <value>&quot;Seznam&quot;</value>
+            <value>&quot;snapchat.com&quot;</value>
+            <value>&quot;SpeedaNewsPicks&quot;</value>
+            <value>&quot;spyglassbot&quot;</value>
+            <value>&quot;StatusCake_Pagespeed_Indev&quot;</value>
+            <value>&quot;Swift Kiosk Browser - Version:59.0.0.0&quot;</value>
+            <value>&quot;test&quot;</value>
+            <value>&quot;ThousandEyes&quot;</value>
+            <value>&quot;UC Browser&quot;</value>
+            <value>&quot;UCWEB&quot;</value>
+            <value>&quot;ulta-app-android&quot;</value>
+            <value>&quot;ulta-app-ios&quot;</value>
+            <value>&quot;United States Postal Service - TRG19-01Loeim&quot;</value>
+            <value>&quot;unknown BingWeb&quot;</value>
+            <value>&quot;Uzbl&quot;</value>
+            <value>&quot;WebPageImager&quot;</value>
+            <value>&quot;Windows 7&quot;</value>
+            <value>&quot;Windows NT 6.1&quot;</value>
+            <value>&quot;www.google.com&quot;</value>
+            <value>&quot;YaBrowser&quot;</value>
+            <value>&quot;YE&quot;</value>
+            <value>&quot;Yewno-Open&quot;</value>
+            <value>&quot;yomama&quot;</value>
+            <value>&quot;ZhihuHybrid DefaultBrowser osee2unifiedRelease&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[browser]' role='dimension' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='Migrated Data' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/NC/Documents/My Tableau Repository/Workbooks/G1 Dashboards - Instructor Workbook.twb Files/Data/tableau-temp/TEMP_141r1wd02nhks213sbsys0y5n2eq.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/20/2020 08:50:13 AM' updated-database='/var/folders/2n/wb73389152j5j4zkj43d7rl40000gn/T/tableau-temp/2857320355/G1 Dashboards - Instructor Workbook.twb Files/browsers.hyper' username=''>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='browsers' increment-value='%null%' refresh-type='create' rows-inserted='7682' timestamp-start='2020-02-20 08:50:13.376' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>browsers.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>90</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>browser</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[browser]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>browser</remote-alias>
+              <ordinal>1</ordinal>
+              <family>browsers.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>171</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visits</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[visits]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>visits</remote-alias>
+              <ordinal>2</ordinal>
+              <family>browsers.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1421</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.01f4qro1w8j6mt1blnpnp1jg22nw' name='browsers.csv' table='[browsers#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='string' name='browser' ordinal='1' />
+                  <column datatype='integer' name='visits' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='devices' inline='true' name='federated.0165qdo0vhqaac1en4bfi0meh90q' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='devices' name='textscan.06o9vl51o1jz611ef1vnr0swvibm'>
+            <connection class='textscan' directory='C:/Users/NC/Documents/My Tableau Repository/Workbooks/G1 Dashboards - Instructor Workbook.twb Files/var/folders/2n/wb73389152j5j4zkj43d7rl40000gn/T/tableau-temp/2857320355/Data/Instructor workbooks' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.06o9vl51o1jz611ef1vnr0swvibm' name='devices.csv' table='[devices#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='string' name='device' ordinal='1' />
+            <column datatype='integer' name='visits' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.06o9vl51o1jz611ef1vnr0swvibm' name='devices.csv' table='[devices#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='string' name='device' ordinal='1' />
+            <column datatype='integer' name='visits' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[devices.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[devices.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>device</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[device]</local-name>
+            <parent-name>[devices.csv]</parent-name>
+            <remote-alias>device</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visits</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[visits]</local-name>
+            <parent-name>[devices.csv]</parent-name>
+            <remote-alias>visits</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column datatype='string' name='[device]' role='dimension' type='nominal' />
+      <column-instance column='[device]' derivation='None' name='[none:device:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='Migrated Data' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/NC/Documents/My Tableau Repository/Workbooks/G1 Dashboards - Instructor Workbook.twb Files/Data/tableau-temp/TEMP_0bupeo30bsnc891caqsq31ka3slc.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/20/2020 08:50:25 AM' updated-database='/var/folders/2n/wb73389152j5j4zkj43d7rl40000gn/T/tableau-temp/2857320355/G1 Dashboards - Instructor Workbook.twb Files/devices.hyper' username=''>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='devices' increment-value='%null%' refresh-type='create' rows-inserted='270' timestamp-start='2020-02-20 08:50:25.418' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>devices.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>90</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>device</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[device]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>device</remote-alias>
+              <ordinal>1</ordinal>
+              <family>devices.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visits</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[visits]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>visits</remote-alias>
+              <ordinal>2</ordinal>
+              <family>devices.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>270</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:device:nk]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>&quot;desktop&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;tablet&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;mobile&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.06o9vl51o1jz611ef1vnr0swvibm' name='devices.csv' table='[devices#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='string' name='device' ordinal='1' />
+                  <column datatype='integer' name='visits' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='os' inline='true' name='federated.0z8r7dd0ii3eit1928yk00u82tu8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='os' name='textscan.0t3llnx0mbvap5159miv302ftt4k'>
+            <connection class='textscan' directory='C:/Users/NC/Documents/My Tableau Repository/Workbooks/G1 Dashboards - Instructor Workbook.twb Files/var/folders/2n/wb73389152j5j4zkj43d7rl40000gn/T/tableau-temp/2857320355/Data/Instructor workbooks' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0t3llnx0mbvap5159miv302ftt4k' name='os.csv' table='[os#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='string' name='os' ordinal='1' />
+            <column datatype='integer' name='visits' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0t3llnx0mbvap5159miv302ftt4k' name='os.csv' table='[os#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='string' name='os' ordinal='1' />
+            <column datatype='integer' name='visits' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[os.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[os.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>os</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[os]</local-name>
+            <parent-name>[os.csv]</parent-name>
+            <remote-alias>os</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visits</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[visits]</local-name>
+            <parent-name>[os.csv]</parent-name>
+            <remote-alias>visits</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column datatype='string' name='[os (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[os]' new-bin='true'>
+          <bin default-name='false' value='&quot;Other &quot;'>
+            <value>&quot;(not set)&quot;</value>
+            <value>&quot;BlackBerry&quot;</value>
+            <value>&quot;Firefox OS&quot;</value>
+            <value>&quot;FreeBSD&quot;</value>
+            <value>&quot;Google TV&quot;</value>
+            <value>&quot;LG&quot;</value>
+            <value>&quot;NetBSD&quot;</value>
+            <value>&quot;Nintendo 3DS&quot;</value>
+            <value>&quot;Nintendo WiiU&quot;</value>
+            <value>&quot;Nokia&quot;</value>
+            <value>&quot;OpenBSD&quot;</value>
+            <value>&quot;OS/2&quot;</value>
+            <value>&quot;Playstation 3&quot;</value>
+            <value>&quot;Playstation 4&quot;</value>
+            <value>&quot;Playstation Vita&quot;</value>
+            <value>&quot;Samsung&quot;</value>
+            <value>&quot;SunOS&quot;</value>
+            <value>&quot;SymbianOS&quot;</value>
+            <value>&quot;Tizen&quot;</value>
+            <value>&quot;UNIX&quot;</value>
+            <value>&quot;Windows Phone&quot;</value>
+            <value>&quot;Xbox&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[os]' role='dimension' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='Migrated Data' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/NC/Documents/My Tableau Repository/Workbooks/G1 Dashboards - Instructor Workbook.twb Files/Data/tableau-temp/TEMP_09z39u71333dpj1ea0r291unqidq.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/20/2020 08:50:28 AM' updated-database='/var/folders/2n/wb73389152j5j4zkj43d7rl40000gn/T/tableau-temp/2857320355/G1 Dashboards - Instructor Workbook.twb Files/os.hyper' username=''>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='os' increment-value='%null%' refresh-type='create' rows-inserted='2225' timestamp-start='2020-02-20 08:50:28.273' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>os.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>90</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>os</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[os]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>os</remote-alias>
+              <ordinal>1</ordinal>
+              <family>os.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visits</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[visits]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>visits</remote-alias>
+              <ordinal>2</ordinal>
+              <family>os.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1061</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='textscan.0t3llnx0mbvap5159miv302ftt4k' name='os.csv' table='[os#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='string' name='os' ordinal='1' />
+                  <column datatype='integer' name='visits' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Browser'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/G1Dashboards-InstructorWorkbook/Browser?rev=' id='30841111' path='/workbooks/G1Dashboards-InstructorWorkbook' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='browsers' name='federated.0cd5cms1f1l1wc1g6jp8t18ogiat' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cd5cms1f1l1wc1g6jp8t18ogiat'>
+            <column datatype='string' name='[browser (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[browser]' new-bin='true'>
+                <bin default-name='false' value='&quot;Other &quot;'>
+                  <value>&quot;--ignore-ssl-errors=true&quot;</value>
+                  <value>&quot;\&quot;Mozilla&quot;</value>
+                  <value>&quot;(not set)&quot;</value>
+                  <value>&quot;[FBAN&quot;</value>
+                  <value>&quot;[object Promise] delve.ai website analyse&quot;</value>
+                  <value>&quot;+Simple Browser&quot;</value>
+                  <value>&quot;1207 Android mobile&quot;</value>
+                  <value>&quot;AdobeAIR&quot;</value>
+                  <value>&quot;Airbnb&quot;</value>
+                  <value>&quot;Amazon Silk&quot;</value>
+                  <value>&quot;Amazon.com&quot;</value>
+                  <value>&quot;android&quot;</value>
+                  <value>&quot;Android Browser&quot;</value>
+                  <value>&quot;Android ExpediaBookings&quot;</value>
+                  <value>&quot;Android Runtime&quot;</value>
+                  <value>&quot;ANTHM-KSD&quot;</value>
+                  <value>&quot;Autn-WKOOP&quot;</value>
+                  <value>&quot;BestBuy&quot;</value>
+                  <value>&quot;BestBuyOwn-iOS&quot;</value>
+                  <value>&quot;bitdiscovery&quot;</value>
+                  <value>&quot;BlackBerry&quot;</value>
+                  <value>&quot;Bloomberg|Android|10|5.15.4.2098128.|1d73b8e092438b2d1f5a9d3525ec33cfd5999299&quot;</value>
+                  <value>&quot;Bloomberg|Android|9|5.14.2.2016955.|3e4ea7b3c732cca10e10f83f7dccbdb767c9e3ce&quot;</value>
+                  <value>&quot;Bloomberg|Android|9|5.15.4.2098128.|1d73b8e092438b2d1f5a9d3525ec33cfd5999299&quot;</value>
+                  <value>&quot;Bloomberg|iOS|13.1.3|5.14.1|a99ce588ff373cade39a08f7c169d6208e33a235&quot;</value>
+                  <value>&quot;Bloomberg|iOS|13.1.3|5.14.2|3e4ea7b3c732cca10e10f83f7dccbdb767c9e3ce&quot;</value>
+                  <value>&quot;Bloomberg|iOS|13.2.3|5.14.2|3e4ea7b3c732cca10e10f83f7dccbdb767c9e3ce&quot;</value>
+                  <value>&quot;Bloomberg|iOS|13.3|5.15.3|de49c0944352dcb5f199c36ea249f68412083de3&quot;</value>
+                  <value>&quot;Bloomberg|iOS|13.3|5.15.4|1d73b8e092438b2d1f5a9d3525ec33cfd5999299&quot;</value>
+                  <value>&quot;Bluebeam Revu Browser - cef version: 57.0.0.0&quot;</value>
+                  <value>&quot;Box&quot;</value>
+                  <value>&quot;Box Sync&quot;</value>
+                  <value>&quot;C:&quot;</value>
+                  <value>&quot;Camino&quot;</value>
+                  <value>&quot;candroid&quot;</value>
+                  <value>&quot;CareDroidMedications&quot;</value>
+                  <value>&quot;Carousel&quot;</value>
+                  <value>&quot;CBC&quot;</value>
+                  <value>&quot;cnbc-native-mobile1.0-iPhone13.1.3&quot;</value>
+                  <value>&quot;cnbc-native-mobile1.0-iPhone13.3&quot;</value>
+                  <value>&quot;Coc Coc&quot;</value>
+                  <value>&quot;com.airfind.browser&quot;</value>
+                  <value>&quot;com.airfind.deltabrowser&quot;</value>
+                  <value>&quot;com.box.android&quot;</value>
+                  <value>&quot;com.doximity.doximitydroid&quot;</value>
+                  <value>&quot;com.doximity.doximitydroid.x&quot;</value>
+                  <value>&quot;com.seekingalpha.webwrapper&quot;</value>
+                  <value>&quot;com.vk.vkclient&quot;</value>
+                  <value>&quot;CyberCycloneBot&quot;</value>
+                  <value>&quot;DDG-Android-3.1.0&quot;</value>
+                  <value>&quot;Default&quot;</value>
+                  <value>&quot;desktop&quot;</value>
+                  <value>&quot;DingTalkBot-LinkService&quot;</value>
+                  <value>&quot;DoximityWebView&quot;</value>
+                  <value>&quot;Emb&quot;</value>
+                  <value>&quot;Empty&quot;</value>
+                  <value>&quot;eQAfy_Website_Checker_Bot_https:&quot;</value>
+                  <value>&quot;fuelbot&quot;</value>
+                  <value>&quot;GeenStijlAndroidApp&quot;</value>
+                  <value>&quot;get-view:subscriber-info.get-view:subscriber-info-re-u-s-ogr.pldFcolpr&amp;[MnSIsdN]&quot;</value>
+                  <value>&quot;Google-Test2&quot;</value>
+                  <value>&quot;HCQA&quot;</value>
+                  <value>&quot;Hexometer&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-9.2.0&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-9.2.1&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-9.3.0&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-8.6.0-Mozilla&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-9.2.0&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-9.2.1&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-9.3.0&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-FACEID-9.3.0-Mozilla&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-8.6.0-Mozilla&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.2.0&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.2.1&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.2.1-Mozilla&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.3.0&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-PHONE-TAXES-TOUCHID-9.3.0-Mozilla&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-9.2.1&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-9.3.0&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-FACEID-9.2.1&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-TOUCHID-9.2.1&quot;</value>
+                  <value>&quot;HRB-MOBILE-IOS-TABLET-TAXES-TOUCHID-9.3.0&quot;</value>
+                  <value>&quot;http:&quot;</value>
+                  <value>&quot;https:&quot;</value>
+                  <value>&quot;IE with Chrome Frame&quot;</value>
+                  <value>&quot;iMozilla&quot;</value>
+                  <value>&quot;Infowars Android&quot;</value>
+                  <value>&quot;Instagram 113.0.0.28.122&quot;</value>
+                  <value>&quot;Instagram 116.0.0.24.361&quot;</value>
+                  <value>&quot;Instagram 117.0.0.23.163&quot;</value>
+                  <value>&quot;Instagram 118.0.0.25.121&quot;</value>
+                  <value>&quot;Instagram 119.0.0.25.146&quot;</value>
+                  <value>&quot;Instagram 120.0.0.18.116&quot;</value>
+                  <value>&quot;Instagram 121.0.0.18.122&quot;</value>
+                  <value>&quot;Instagram 121.1.0.22.122&quot;</value>
+                  <value>&quot;Instagram 122.1.0.16.239&quot;</value>
+                  <value>&quot;Instagram 123.0.0.24.115&quot;</value>
+                  <value>&quot;Instagram 123.1.0.26.115&quot;</value>
+                  <value>&quot;Instagram 124.0.0.11.473&quot;</value>
+                  <value>&quot;Instagram 125.0.0.18.125&quot;</value>
+                  <value>&quot;Instagram 75.0.0.23.99&quot;</value>
+                  <value>&quot;InstaRoyal&quot;</value>
+                  <value>&quot;InteriaFakty&quot;</value>
+                  <value>&quot;iPad&quot;</value>
+                  <value>&quot;iPhone&quot;</value>
+                  <value>&quot;iphone6s BingWeb&quot;</value>
+                  <value>&quot;Iron&quot;</value>
+                  <value>&quot;IRS - TRG19-01Loeim&quot;</value>
+                  <value>&quot;KommersantApp&quot;</value>
+                  <value>&quot;LeapPad3Explorer&quot;</value>
+                  <value>&quot;LeapPadPlatinum&quot;</value>
+                  <value>&quot;LeapPadUltimate&quot;</value>
+                  <value>&quot;LG-B470&quot;</value>
+                  <value>&quot;LIAuthLibrary:0.0.3 com.linkedin.android:4.1.388 LGE_LM-X210VPP:android_7.1.2&quot;</value>
+                  <value>&quot;liip&quot;</value>
+                  <value>&quot;liloiosapp-66.1.4 Mozilla&quot;</value>
+                  <value>&quot;liloiosapp-66.1.5 Mozilla&quot;</value>
+                  <value>&quot;liloiosapp-66.1.6 Mozilla&quot;</value>
+                  <value>&quot;LINER&quot;</value>
+                  <value>&quot;LiveSlides&quot;</value>
+                  <value>&quot;Lore Document Collector 1bb1dbb613d0db2041e35f52fea672c7&quot;</value>
+                  <value>&quot;Lore Document Collector 5a20b182ca368a24e6462a7ac6947051&quot;</value>
+                  <value>&quot;Lunascape&quot;</value>
+                  <value>&quot;MagentaNews&quot;</value>
+                  <value>&quot;Maxthon&quot;</value>
+                  <value>&quot;medical-lighter&quot;</value>
+                  <value>&quot;MercadoLibre-Android&quot;</value>
+                  <value>&quot;Mercari_d&quot;</value>
+                  <value>&quot;mobile&quot;</value>
+                  <value>&quot;Mobile IOS 9.0.1.1; Mozilla&quot;</value>
+                  <value>&quot;mozilla&quot;</value>
+                  <value>&quot;Mozilla&quot;</value>
+                  <value>&quot;Mozilla Compatible Agent&quot;</value>
+                  <value>&quot;Mozilla\\&quot;</value>
+                  <value>&quot;MRCHROME&quot;</value>
+                  <value>&quot;MUDV4&quot;</value>
+                  <value>&quot;NE3&quot;</value>
+                  <value>&quot;netdisk;2.2.2;pc;pc-mac;10.14.5;macbaiduyunguanjia&quot;</value>
+                  <value>&quot;NetFront&quot;</value>
+                  <value>&quot;Netscape&quot;</value>
+                  <value>&quot;Netsparker Agent&quot;</value>
+                  <value>&quot;NinjBot&quot;</value>
+                  <value>&quot;Nintendo 3DS Browser&quot;</value>
+                  <value>&quot;Nintendo Browser&quot;</value>
+                  <value>&quot;Nokia Browser&quot;</value>
+                  <value>&quot;One Drop Web Agent&quot;</value>
+                  <value>&quot;Opendi Screenshot Bot bot@opendi.com&quot;</value>
+                  <value>&quot;Opera&quot;</value>
+                  <value>&quot;Opera Mini&quot;</value>
+                  <value>&quot;osee2unifiedRelease&quot;</value>
+                  <value>&quot;Outlook-iOS&quot;</value>
+                  <value>&quot;pa11y&quot;</value>
+                  <value>&quot;Papers&quot;</value>
+                  <value>&quot;Papers2 Thumbnail Helper&quot;</value>
+                  <value>&quot;PC&quot;</value>
+                  <value>&quot;Playstation 3&quot;</value>
+                  <value>&quot;Playstation 4&quot;</value>
+                  <value>&quot;Playstation Vita Browser&quot;</value>
+                  <value>&quot;Puffin&quot;</value>
+                  <value>&quot;rsotaua 1.0&quot;</value>
+                  <value>&quot;SeaMonkey&quot;</value>
+                  <value>&quot;Selenium&quot;</value>
+                  <value>&quot;Sephora 19.7&quot;</value>
+                  <value>&quot;Sephora 19.7.1&quot;</value>
+                  <value>&quot;Sephora 19.8&quot;</value>
+                  <value>&quot;Seznam&quot;</value>
+                  <value>&quot;snapchat.com&quot;</value>
+                  <value>&quot;SpeedaNewsPicks&quot;</value>
+                  <value>&quot;spyglassbot&quot;</value>
+                  <value>&quot;StatusCake_Pagespeed_Indev&quot;</value>
+                  <value>&quot;Swift Kiosk Browser - Version:59.0.0.0&quot;</value>
+                  <value>&quot;test&quot;</value>
+                  <value>&quot;ThousandEyes&quot;</value>
+                  <value>&quot;UC Browser&quot;</value>
+                  <value>&quot;UCWEB&quot;</value>
+                  <value>&quot;ulta-app-android&quot;</value>
+                  <value>&quot;ulta-app-ios&quot;</value>
+                  <value>&quot;United States Postal Service - TRG19-01Loeim&quot;</value>
+                  <value>&quot;unknown BingWeb&quot;</value>
+                  <value>&quot;Uzbl&quot;</value>
+                  <value>&quot;WebPageImager&quot;</value>
+                  <value>&quot;Windows 7&quot;</value>
+                  <value>&quot;Windows NT 6.1&quot;</value>
+                  <value>&quot;www.google.com&quot;</value>
+                  <value>&quot;YaBrowser&quot;</value>
+                  <value>&quot;YE&quot;</value>
+                  <value>&quot;Yewno-Open&quot;</value>
+                  <value>&quot;yomama&quot;</value>
+                  <value>&quot;ZhihuHybrid DefaultBrowser osee2unifiedRelease&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[browser]' role='dimension' type='nominal' />
+            <column-instance column='[visits]' derivation='Sum' name='[pcto:sum:visits:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column datatype='integer' name='[visits]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0cd5cms1f1l1wc1g6jp8t18ogiat].[browser (group)]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Chrome&quot;</bucket>
+              <bucket>&quot;Safari&quot;</bucket>
+              <bucket>&quot;Internet Explorer&quot;</bucket>
+              <bucket>&quot;Edge&quot;</bucket>
+              <bucket>&quot;Firefox&quot;</bucket>
+              <bucket>&quot;Samsung Internet&quot;</bucket>
+              <bucket>&quot;Safari (in-app)&quot;</bucket>
+              <bucket>&quot;Android Webview&quot;</bucket>
+              <bucket>&quot;Other &quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0cd5cms1f1l1wc1g6jp8t18ogiat].[pcto:sum:visits:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0cd5cms1f1l1wc1g6jp8t18ogiat].[browser (group)]' value='25' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c0c0c0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0cd5cms1f1l1wc1g6jp8t18ogiat].[browser (group)]</rows>
+        <cols>[federated.0cd5cms1f1l1wc1g6jp8t18ogiat].[pcto:sum:visits:qk]</cols>
+      </table>
+      <simple-id uuid='{F7A187E4-55E4-4EA3-8FFF-0BCDD373BA5F}' />
+    </worksheet>
+    <worksheet name='Devices'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/G1Dashboards-InstructorWorkbook/Devices?rev=' id='30841112' path='/workbooks/G1Dashboards-InstructorWorkbook' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='devices' name='federated.0165qdo0vhqaac1en4bfi0meh90q' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0165qdo0vhqaac1en4bfi0meh90q'>
+            <column datatype='string' name='[device]' role='dimension' type='nominal' />
+            <column-instance column='[device]' derivation='None' name='[none:device:nk]' pivot='key' type='nominal' />
+            <column-instance column='[visits]' derivation='Sum' name='[pcto:sum:visits:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column datatype='integer' name='[visits]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0165qdo0vhqaac1en4bfi0meh90q].[pcto:sum:visits:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c0c0c0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0165qdo0vhqaac1en4bfi0meh90q].[none:device:nk]</rows>
+        <cols>[federated.0165qdo0vhqaac1en4bfi0meh90q].[pcto:sum:visits:qk]</cols>
+      </table>
+      <simple-id uuid='{AB715020-D3DF-4088-A56D-CEF9AE18FB21}' />
+    </worksheet>
+    <worksheet name='Operating System'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/G1Dashboards-InstructorWorkbook/OperatingSystem?rev=' id='30841113' path='/workbooks/G1Dashboards-InstructorWorkbook' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='os' name='federated.0z8r7dd0ii3eit1928yk00u82tu8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z8r7dd0ii3eit1928yk00u82tu8'>
+            <column datatype='string' name='[os (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[os]' new-bin='true'>
+                <bin default-name='false' value='&quot;Other &quot;'>
+                  <value>&quot;(not set)&quot;</value>
+                  <value>&quot;BlackBerry&quot;</value>
+                  <value>&quot;Firefox OS&quot;</value>
+                  <value>&quot;FreeBSD&quot;</value>
+                  <value>&quot;Google TV&quot;</value>
+                  <value>&quot;LG&quot;</value>
+                  <value>&quot;NetBSD&quot;</value>
+                  <value>&quot;Nintendo 3DS&quot;</value>
+                  <value>&quot;Nintendo WiiU&quot;</value>
+                  <value>&quot;Nokia&quot;</value>
+                  <value>&quot;OpenBSD&quot;</value>
+                  <value>&quot;OS/2&quot;</value>
+                  <value>&quot;Playstation 3&quot;</value>
+                  <value>&quot;Playstation 4&quot;</value>
+                  <value>&quot;Playstation Vita&quot;</value>
+                  <value>&quot;Samsung&quot;</value>
+                  <value>&quot;SunOS&quot;</value>
+                  <value>&quot;SymbianOS&quot;</value>
+                  <value>&quot;Tizen&quot;</value>
+                  <value>&quot;UNIX&quot;</value>
+                  <value>&quot;Windows Phone&quot;</value>
+                  <value>&quot;Xbox&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[os]' role='dimension' type='nominal' />
+            <column-instance column='[visits]' derivation='Sum' name='[pcto:sum:visits:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[visits]' derivation='Sum' name='[sum:visits:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[visits]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0z8r7dd0ii3eit1928yk00u82tu8].[os (group)]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0z8r7dd0ii3eit1928yk00u82tu8].[sum:visits:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0z8r7dd0ii3eit1928yk00u82tu8].[pcto:sum:visits:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='21' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c0c0c0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0z8r7dd0ii3eit1928yk00u82tu8].[os (group)]</rows>
+        <cols>[federated.0z8r7dd0ii3eit1928yk00u82tu8].[pcto:sum:visits:qk]</cols>
+      </table>
+      <simple-id uuid='{5CE63285-B089-4B06-9BF0-FDF7E4DDAE07}' />
+    </worksheet>
+    <worksheet name='Timeline of visits by device type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Visits by Device Type&#10;</run>
+            <run fontcolor='#499894'>Desktop</run>
+            <run> | </run>
+            <run fontcolor='#f28e2b'>Mobile</run>
+            <run> | </run>
+            <run fontcolor='#b07aa1'>Tablet</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/G1Dashboards-InstructorWorkbook/Timelineofvisitsbydevicetype?rev=' id='30841114' path='/workbooks/G1Dashboards-InstructorWorkbook' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='devices' name='federated.0165qdo0vhqaac1en4bfi0meh90q' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0165qdo0vhqaac1en4bfi0meh90q'>
+            <column datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[device]' role='dimension' type='nominal' />
+            <column-instance column='[device]' derivation='None' name='[none:device:nk]' pivot='key' type='nominal' />
+            <column-instance column='[visits]' derivation='Sum' name='[sum:visits:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[visits]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0165qdo0vhqaac1en4bfi0meh90q].[tdy:date:qk]' scope='cols' value='' />
+            <format attr='title' class='0' field='[federated.0165qdo0vhqaac1en4bfi0meh90q].[sum:visits:qk]' scope='rows' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0165qdo0vhqaac1en4bfi0meh90q].[none:device:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0165qdo0vhqaac1en4bfi0meh90q].[sum:visits:qk]</rows>
+        <cols>[federated.0165qdo0vhqaac1en4bfi0meh90q].[tdy:date:qk]</cols>
+      </table>
+      <simple-id uuid='{CD967CAE-C0FF-4BD1-A208-FB8BAAB81768}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#f5f5f5'>U.S. Federal Government</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#f5f5f5'>Website Traffic</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#f5f5f5'>analytics.usa.gov</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/G1Dashboards-InstructorWorkbook/Dashboard1?rev=' id='30841115' path='/workbooks/G1Dashboards-InstructorWorkbook' revision='' />
+      <style>
+        <style-rule element='dash-title'>
+          <format attr='background-color' value='#0d1467' />
+        </style-rule>
+      </style>
+      <size maxheight='988' maxwidth='1556' minheight='988' minwidth='1556' preset-index='17' sizing-mode='fixed' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='94358' id='13' param='vert' w='98972' x='514' y='810'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' fixed-size='103' h='11235' id='14' is-fixed='true' w='98972' x='514' y='810'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='83123' id='7' param='horz' w='98972' x='514' y='12045'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='83123' id='5' w='98972' x='514' y='12045'>
+                <zone h='41552' id='3' name='Timeline of visits by device type' w='98972' x='514' y='12045'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='41571' id='9' name='Browser' w='32677' x='514' y='53597'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='41571' id='10' name='Devices' w='34707' x='64779' y='53597'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='41571' id='11' name='Operating System' w='31588' x='33191' y='53597'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='4022' id='15' w='98972' x='514' y='95168'>
+            <formatted-text>
+              <run>Data Source: </run>
+              <run auto-url='true' hyperlink='tabdoc:load-url url=&amp;quot;https://analytics.usa.gov&amp;quot;'>https://analytics.usa.gov</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout name='Tablet'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#f5f5f5'>U.S. Federal Government</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f5f5f5'>Website Traffic</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#f5f5f5'>analytics.usa.gov</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size sizing-mode='automatic' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='93993' id='13' param='vert' w='98334' x='833' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' fixed-size='103' h='13875' id='14' is-fixed='true' w='98334' x='833' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='80118' id='7' param='horz' w='98334' x='833' y='14875'>
+                  <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='80118' id='5' w='98334' x='833' y='14875'>
+                    <zone h='40049' id='3' name='Timeline of visits by device type' w='98334' x='833' y='14875'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='40069' id='9' name='Browser' w='32466' x='833' y='54924'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='40069' id='10' name='Devices' w='34484' x='64683' y='54924'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='40069' id='11' name='Operating System' w='31384' x='33299' y='54924'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='4007' id='15' w='98334' x='833' y='94993'>
+                <formatted-text>
+                  <run>Data Source: </run>
+                  <run auto-url='true' hyperlink='tabdoc:load-url url=&amp;quot;https://analytics.usa.gov&amp;quot;'>https://analytics.usa.gov</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+        <devicelayout name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#f5f5f5'>U.S. Federal Government</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f5f5f5'>Website Traffic</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#f5f5f5'>analytics.usa.gov</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='33' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98400' id='32' param='vert' w='95734' x='2133' y='800'>
+                <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' fixed-size='103' h='9500' id='14' w='95734' x='2133' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='28800' id='3' is-fixed='true' name='Timeline of visits by device type' w='95734' x='2133' y='10300'>
+                  <layout-cache minheight='201' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='28800' id='9' is-fixed='true' name='Browser' w='95734' x='2133' y='39100'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='28800' id='11' is-fixed='true' name='Operating System' w='95734' x='2133' y='67900'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='2500' id='15' w='95734' x='2133' y='96700'>
+                  <formatted-text>
+                    <run>Data Source: </run>
+                    <run auto-url='true' hyperlink='tabdoc:load-url url=&amp;quot;https://analytics.usa.gov&amp;quot;'>https://analytics.usa.gov</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5EEEC1AF-33B5-4CC8-AF80-DBC2086BFE74}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='72'>
+    <window class='worksheet' name='Browser'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0cd5cms1f1l1wc1g6jp8t18ogiat].[none:browser:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9280EC67-976F-4557-8016-66479F7097A2}' />
+    </window>
+    <window class='worksheet' name='Devices'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0165qdo0vhqaac1en4bfi0meh90q].[none:device:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{471AC9B0-8678-4E60-B327-7958A76181A3}' />
+    </window>
+    <window class='worksheet' name='Operating System'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0z8r7dd0ii3eit1928yk00u82tu8].[none:os:nk]</field>
+            <field>[federated.0z8r7dd0ii3eit1928yk00u82tu8].[os (group)]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{538ADF45-B1F7-4C8E-8A87-3E8EBC2BB932}' />
+    </window>
+    <window class='worksheet' name='Timeline of visits by device type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.0165qdo0vhqaac1en4bfi0meh90q].[none:device:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0165qdo0vhqaac1en4bfi0meh90q].[none:device:nk]</field>
+            <field>[federated.0165qdo0vhqaac1en4bfi0meh90q].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BEB5342F-BA47-4B28-AB9E-EE7D955AC2E5}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Browser'>
+          <zoom type='fit-height' />
+        </viewpoint>
+        <viewpoint name='Devices'>
+          <zoom type='fit-height' />
+        </viewpoint>
+        <viewpoint name='Operating System'>
+          <zoom type='fit-height' />
+        </viewpoint>
+        <viewpoint name='Timeline of visits by device type'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0165qdo0vhqaac1en4bfi0meh90q].[none:device:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview mobileapp-chrome-visible='false' selected='Desktop'>
+        <device name='Medium Desktop Monitor' type='Desktop' />
+        <device name='Nexus 7' type='Tablet' />
+        <device is-portrait='true' name='iPhone X, XS' type='Phone' />
+      </device-preview>
+      <simple-id uuid='{9382A2C6-D797-4BEE-B807-A153C207C3E4}' />
+    </window>
+  </windows>
+</workbook>

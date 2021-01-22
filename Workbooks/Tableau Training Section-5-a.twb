@@ -1,0 +1,884 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.20.1106.0321                               -->
+<workbook source-build='2020.4.0 (20204.20.1106.0321)' source-platform='win' upgrade-extracts='false' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/TableauTrainingSection-5-a?rev=1.0' id='TableauTrainingSection-5-a' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='clean' />
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource caption='Airline1 (Airline-Comparison)' inline='true' name='excel-direct.42179.805333981480' version='18.1'>
+      <connection class='federated' prefer-ind-semantics='true'>
+        <named-connections>
+          <named-connection caption='Airline1 (Airline-Comparison)' name='excel-direct.42179.805333981480leaf'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.42179.805333981480leaf' name='Airline1$' table='[Airline1$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='string' name='Period' ordinal='0' />
+            <column datatype='string' name='Region' ordinal='1' />
+            <column datatype='integer' name='Revenue' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.42179.805333981480leaf' name='Airline1$' table='[Airline1$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='string' name='Period' ordinal='0' />
+            <column datatype='string' name='Region' ordinal='1' />
+            <column datatype='integer' name='Revenue' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Period</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Period]</local-name>
+            <parent-name>[Airline1$]</parent-name>
+            <remote-alias>Period</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Airline1$]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Revenue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Revenue]</local-name>
+            <parent-name>[Airline1$]</parent-name>
+            <remote-alias>Revenue</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Airline1$]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='Migrated Data' count='-1' enabled='true' units='records'>
+        <connection authentication='auth-none' author-locale='en_US' class='hyper' db-format='dataengine' dbname='C:/Users/NC/Documents/My Tableau Repository/Workbooks/Tableau Training Section-5-a.twb Files/Data/TableauTemp/02qmt2s0wmp7hq12k8ltm015nb73.tmp' default-settings='yes' sslmode='' update-time='09/11/2015 02:40:05 AM' updated-database='D:\Tableau Course\Airline1 (Airline-Comparison).tde' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='12' timestamp-start='2015-09-11 02:40:05.213' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Period</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Period]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Period</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Airline1$</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Airline1$</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Revenue</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Airline1$</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Namibia&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='excel-direct.42179.805333981480leaf' name='Airline1$' table='[Airline1$]' type='table'>
+                <columns header='yes' outcome='6'>
+                  <column datatype='string' name='Period' ordinal='0' />
+                  <column datatype='string' name='Region' ordinal='1' />
+                  <column datatype='integer' name='Revenue' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Airline2 (Airline-Comparison)' inline='true' name='excel-direct.42179.805480497685' version='18.1'>
+      <connection class='federated' prefer-ind-semantics='true'>
+        <named-connections>
+          <named-connection caption='Airline2 (Airline-Comparison)' name='excel-direct.42179.805480497685leaf'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.42179.805480497685leaf' name='Airline2$' table='[Airline2$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='string' name='Year' ordinal='0' />
+            <column datatype='string' name='Region' ordinal='1' />
+            <column datatype='integer' name='Revenue' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.42179.805480497685leaf' name='Airline2$' table='[Airline2$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='string' name='Year' ordinal='0' />
+            <column datatype='string' name='Region' ordinal='1' />
+            <column datatype='integer' name='Revenue' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Airline2$]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Airline2$]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Revenue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Revenue]</local-name>
+            <parent-name>[Airline2$]</parent-name>
+            <remote-alias>Revenue</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Airline2$]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Period' datatype='string' name='[Year]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='Migrated Data' count='-1' enabled='true' units='records'>
+        <connection authentication='auth-none' author-locale='en_US' class='hyper' db-format='dataengine' dbname='C:/Users/NC/Documents/My Tableau Repository/Workbooks/Tableau Training Section-5-a.twb Files/Data/TableauTemp/1ozjp6w077sn2s11hvq751h9nzmt.tmp' default-settings='yes' sslmode='' update-time='09/11/2015 02:40:09 AM' updated-database='D:\Tableau Course\Airline2 (Airline-Comparison).tde' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='8' timestamp-start='2015-09-11 02:40:09.625' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Airline2$</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Revenue</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Revenue</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Airline2$</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Airline2$</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Namibia&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='excel-direct.42179.805480497685leaf' name='Airline2$' table='[Airline2$]' type='table'>
+                <columns header='yes' outcome='6'>
+                  <column datatype='string' name='Year' ordinal='0' />
+                  <column datatype='string' name='Region' ordinal='1' />
+                  <column datatype='integer' name='Revenue' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/TableauTrainingSection-5-a/Sheet1?rev=' id='10522697' path='/workbooks/TableauTrainingSection-5-a' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airline1 (Airline-Comparison)' name='excel-direct.42179.805333981480' />
+            <datasource caption='Airline2 (Airline-Comparison)' name='excel-direct.42179.805480497685' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42179.805333981480'>
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Revenue]' derivation='Sum' name='[sum:Revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='excel-direct.42179.805480497685'>
+            <column datatype='integer' name='[Revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Revenue]' derivation='Sum' name='[sum:Revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[excel-direct.42179.805333981480].[sum:Revenue:qk]' value='c&quot;$&quot;#,##0,,M;(&quot;$&quot;#,##0,,M)' />
+            <format attr='text-format' field='[excel-direct.42179.805480497685].[sum:Revenue:qk]' value='c&quot;$&quot;#,##0,,M;(&quot;$&quot;#,##0,,M)' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='10' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='10' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='368' />
+                <format attr='maxwidth' value='368' />
+                <format attr='minheight' value='120' />
+                <format attr='maxheight' value='120' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-disallow' x-axis-name='[excel-direct.42179.805333981480].[sum:Revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[excel-direct.42179.805333981480].[sum:Revenue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='599' />
+                <format attr='maxwidth' value='599' />
+                <format attr='minheight' value='120' />
+                <format attr='maxheight' value='120' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-disallow' x-axis-name='[excel-direct.42179.805480497685].[sum:Revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[excel-direct.42179.805480497685].[sum:Revenue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='599' />
+                <format attr='maxwidth' value='599' />
+                <format attr='minheight' value='120' />
+                <format attr='maxheight' value='120' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42179.805333981480].[none:Region:nk]</rows>
+        <cols>([excel-direct.42179.805333981480].[sum:Revenue:qk] + [excel-direct.42179.805480497685].[sum:Revenue:qk])</cols>
+      </table>
+      <simple-id uuid='{0D92BB54-001E-4B1A-A419-B4AF3C5FE9B6}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/TableauTrainingSection-5-a/Sheet2?rev=' id='10522698' path='/workbooks/TableauTrainingSection-5-a' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airline2 (Airline-Comparison)' name='excel-direct.42179.805480497685' />
+            <datasource caption='Airline1 (Airline-Comparison)' name='excel-direct.42179.805333981480' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42179.805333981480'>
+            <column datatype='integer' name='[Revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Revenue]' derivation='Sum' name='[sum:Revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='excel-direct.42179.805480497685'>
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Revenue]' derivation='Sum' name='[sum:Revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[excel-direct.42179.805480497685].[none:Region:nk]' value='36' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='456' />
+                <format attr='maxwidth' value='456' />
+                <format attr='minheight' value='80' />
+                <format attr='maxheight' value='80' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-disallow' x-axis-name='[excel-direct.42179.805480497685].[sum:Revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[excel-direct.42179.805480497685].[sum:Revenue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='456' />
+                <format attr='maxwidth' value='456' />
+                <format attr='minheight' value='80' />
+                <format attr='maxheight' value='80' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-disallow' x-axis-name='[excel-direct.42179.805333981480].[sum:Revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[excel-direct.42179.805333981480].[sum:Revenue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='456' />
+                <format attr='maxwidth' value='456' />
+                <format attr='minheight' value='80' />
+                <format attr='maxheight' value='80' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42179.805480497685].[none:Region:nk]</rows>
+        <cols>([excel-direct.42179.805480497685].[sum:Revenue:qk] + [excel-direct.42179.805333981480].[sum:Revenue:qk])</cols>
+      </table>
+      <simple-id uuid='{D1AAD17B-FAB5-43F1-B82C-7B293196275C}' />
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[excel-direct.42179.805333981480].[none:Period:nk]</field>
+            <field>[excel-direct.42179.805333981480].[none:Region:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D009E48B-999E-4DFF-A638-22C6331819EA}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[excel-direct.42179.805480497685].[none:Region:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BC4A8E00-A00D-45CE-B561-459B23505D1C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='186' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+      Eunn8QAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,1262 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.20.1106.0321                               -->
+<workbook original-version='18.1' source-build='2020.4.0 (20204.20.1106.0321)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/DSGO19book3?rev=1.3' id='DSGO19book3' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Failure Rate Threshold' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='0.02'>
+        <calculation class='tableau' formula='0.02' />
+      </column>
+    </datasource>
+    <datasource caption='Turbine failures.csv+ (Multiple Connections) (2)' inline='true' name='federated.04svfwc04dsumq14xakfr1tihmib' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Turbine failures' name='textscan.0j03vh607q91i20ziknln0wyh14h'>
+            <connection class='textscan' directory='C:/Users/NC/Documents/My Tableau Repository/Workbooks/DSGO19 book3.twb Files/Users/kirill/Dropbox (Personal)/My Presentations/DSGO 2019 - workshop' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='Turbine population' name='textscan.1pqf0d00mk9b7p18zu3vl07t4203'>
+            <connection class='textscan' directory='C:/Users/NC/Documents/My Tableau Repository/Workbooks/DSGO19 book3.twb Files/Users/kirill/Dropbox (Personal)/My Presentations/DSGO 2019 - workshop' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Turbine failures.csv].[State]' />
+              <expression op='[Turbine population.csv].[State]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0j03vh607q91i20ziknln0wyh14h' name='Turbine failures.csv' table='[Turbine failures#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='integer' name='Number' ordinal='0' />
+              <column datatype='string' name='Failure type' ordinal='1' />
+              <column datatype='string' name='State' ordinal='2' />
+              <column datatype='real' name='Capacity MW' ordinal='3' />
+              <column datatype='real' name='Rand' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1pqf0d00mk9b7p18zu3vl07t4203' name='Turbine population.csv' table='[Turbine population#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='string' name='State' ordinal='0' />
+              <column datatype='integer' name='# of Wind Turbines' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Turbine failures.csv].[State]' />
+              <expression op='[Turbine population.csv].[State]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0j03vh607q91i20ziknln0wyh14h' name='Turbine failures.csv' table='[Turbine failures#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='integer' name='Number' ordinal='0' />
+              <column datatype='string' name='Failure type' ordinal='1' />
+              <column datatype='string' name='State' ordinal='2' />
+              <column datatype='real' name='Capacity MW' ordinal='3' />
+              <column datatype='real' name='Rand' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1pqf0d00mk9b7p18zu3vl07t4203' name='Turbine population.csv' table='[Turbine population#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='string' name='State' ordinal='0' />
+              <column datatype='integer' name='# of Wind Turbines' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[# of Wind Turbines]' value='[Turbine population.csv].[# of Wind Turbines]' />
+          <map key='[Capacity MW]' value='[Turbine failures.csv].[Capacity MW]' />
+          <map key='[Failure type]' value='[Turbine failures.csv].[Failure type]' />
+          <map key='[Number]' value='[Turbine failures.csv].[Number]' />
+          <map key='[Rand]' value='[Turbine failures.csv].[Rand]' />
+          <map key='[State (Turbine population.csv)]' value='[Turbine population.csv].[State]' />
+          <map key='[State]' value='[Turbine failures.csv].[State]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Turbine failures.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number]</local-name>
+            <parent-name>[Turbine failures.csv]</parent-name>
+            <remote-alias>Number</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Failure type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Failure type]</local-name>
+            <parent-name>[Turbine failures.csv]</parent-name>
+            <remote-alias>Failure type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Turbine failures.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Capacity MW</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Capacity MW]</local-name>
+            <parent-name>[Turbine failures.csv]</parent-name>
+            <remote-alias>Capacity MW</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rand</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rand]</local-name>
+            <parent-name>[Turbine failures.csv]</parent-name>
+            <remote-alias>Rand</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Turbine population.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State (Turbine population.csv)]</local-name>
+            <parent-name>[Turbine population.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Wind Turbines</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[# of Wind Turbines]</local-name>
+            <parent-name>[Turbine population.csv]</parent-name>
+            <remote-alias># of Wind Turbines</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Failure Rate' datatype='real' name='[Calculation_1795880758340349952]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Number of Records])/MAX([# of Wind Turbines])' />
+      </column>
+      <column aggregation='None' caption='Capacity MW (bin)' datatype='integer' name='[Capacity MW (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[Capacity MW]' peg='0' size='0.2' />
+      </column>
+      <column datatype='real' name='[Capacity MW]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[State (Turbine population.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Migrated Data' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <group caption='Action (State (Turbine population.csv))' hidden='true' name='[Action (State (Turbine population.csv))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[State (Turbine population.csv)]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='Migrated Data' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/NC/Documents/My Tableau Repository/Workbooks/DSGO19 book3.twb Files/Data/tableau-temp/TEMP_1ms5by31ggw6oq1eleioi1dd3ci3.hyper' default-settings='yes' schema='Extract' sslmode='' update-time='09/27/2019 05:16:40 PM' updated-database='/var/folders/2n/wb73389152j5j4zkj43d7rl40000gn/T/tableau-temp/#TableauTemp_12j237z06xj8b316edglo0hxpxw8.hyper' username=''>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[# of Wind Turbines]' value='[Extract].[# of Wind Turbines]' />
+            <map key='[Capacity MW]' value='[Extract].[Capacity MW]' />
+            <map key='[Failure type]' value='[Extract].[Failure type]' />
+            <map key='[Number]' value='[Extract].[Number]' />
+            <map key='[Rand]' value='[Extract].[Rand]' />
+            <map key='[State (Turbine population.csv)]' value='[Extract].[State]' />
+            <map key='[State]' value='[Extract].[State1]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='Turbine failures.csv+ (Multiple Connections) (2)' increment-value='%null%' refresh-type='create' rows-inserted='861' timestamp-start='2019-09-27 17:16:40.200' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Turbine failures.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>861</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Failure type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Failure type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Failure type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Turbine failures.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State1</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Turbine failures.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Capacity MW</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Capacity MW]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Capacity MW</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Turbine failures.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rand</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Rand]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rand</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Turbine failures.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>861</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State (Turbine population.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Turbine population.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name># of Wind Turbines</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[# of Wind Turbines]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias># of Wind Turbines</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Turbine population.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Migrated Data' id='Migrated Data'>
+            <properties context=''>
+              <relation join='left' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[Turbine failures.csv].[State]' />
+                    <expression op='[Turbine population.csv].[State]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.0j03vh607q91i20ziknln0wyh14h' name='Turbine failures.csv' table='[Turbine failures#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                    <column datatype='integer' name='Number' ordinal='0' />
+                    <column datatype='string' name='Failure type' ordinal='1' />
+                    <column datatype='string' name='State' ordinal='2' />
+                    <column datatype='real' name='Capacity MW' ordinal='3' />
+                    <column datatype='real' name='Rand' ordinal='4' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1pqf0d00mk9b7p18zu3vl07t4203' name='Turbine population.csv' table='[Turbine population#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                    <column datatype='string' name='State' ordinal='0' />
+                    <column datatype='integer' name='# of Wind Turbines' ordinal='1' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='US Map' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Capacity MW Distribution'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DSGO19book3/CapacityMWDistribution?rev=' id='28016570' path='/workbooks/DSGO19book3' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Turbine failures.csv+ (Multiple Connections) (2)' name='federated.04svfwc04dsumq14xakfr1tihmib' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04svfwc04dsumq14xakfr1tihmib'>
+            <column aggregation='None' caption='Capacity MW (bin)' datatype='integer' name='[Capacity MW (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-1' formula='[Capacity MW]' peg='0' size='0.2' />
+            </column>
+            <column datatype='real' name='[Capacity MW]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[State (Turbine population.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Capacity MW (bin)]' derivation='None' name='[none:Capacity MW (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+            <groupfilter function='level-members' level='[State (Turbine population.csv)]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c290b4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]</rows>
+        <cols include-empty='true'>[federated.04svfwc04dsumq14xakfr1tihmib].[none:Capacity MW (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.04svfwc04dsumq14xakfr1tihmib].[Capacity MW (bin)]</column>
+        </show-full-range>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{C3778FE1-56AA-44B3-B840-6161E0B24B80}' />
+    </worksheet>
+    <worksheet name='Damage Type'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DSGO19book3/DamageType?rev=' id='28016569' path='/workbooks/DSGO19book3' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Turbine failures.csv+ (Multiple Connections) (2)' name='federated.04svfwc04dsumq14xakfr1tihmib' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04svfwc04dsumq14xakfr1tihmib'>
+            <column datatype='string' name='[Failure type]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[State (Turbine population.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Failure type]' derivation='None' name='[none:Failure type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+            <groupfilter function='level-members' level='[State (Turbine population.csv)]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.04svfwc04dsumq14xakfr1tihmib].[pcto:sum:Number of Records:qk]' value='p0%' />
+            <format attr='width' value='200' />
+            <format attr='height' value='223' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.04svfwc04dsumq14xakfr1tihmib].[none:Failure type:nk]' />
+              <wedge-size column='[federated.04svfwc04dsumq14xakfr1tihmib].[pcto:sum:Number of Records:qk]' />
+              <size column='[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]' />
+              <text column='[federated.04svfwc04dsumq14xakfr1tihmib].[none:Failure type:nk]' />
+              <text column='[federated.04svfwc04dsumq14xakfr1tihmib].[pcto:sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[none:Failure type:nk]</field>
+                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]</field>
+                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[pcto:sum:Number of Records:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Blade Damage&quot;</value>
+                <value>102</value>
+                <value>0.63749999999999996</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-50' y='-55' />
+          </mark-label>
+        </mark-labels>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{2B119209-1E82-4AE2-9F52-4947ADBE0B6F}' />
+    </worksheet>
+    <worksheet name='Failure Rate'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DSGO19book3/FailureRate?rev=' id='28016568' path='/workbooks/DSGO19book3' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Turbine failures.csv+ (Multiple Connections) (2)' name='federated.04svfwc04dsumq14xakfr1tihmib' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Failure Rate Threshold' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='0.02'>
+              <calculation class='tableau' formula='0.02' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.04svfwc04dsumq14xakfr1tihmib'>
+            <column datatype='integer' name='[# of Wind Turbines]' role='measure' type='quantitative' />
+            <column caption='Failure Rate' datatype='real' name='[Calculation_1795880758340349952]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Number of Records])/MAX([# of Wind Turbines])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1795880758340349952]' derivation='User' name='[usr:Calculation_1795880758340349952:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' />
+              <text column='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' />
+              <text column='[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[Parameters].[Parameter 1]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]</rows>
+        <cols>[federated.04svfwc04dsumq14xakfr1tihmib].[none:State:nk]</cols>
+      </table>
+      <simple-id uuid='{11041638-B3C7-4395-A4F9-232FF8C5392E}' />
+    </worksheet>
+    <worksheet name='US Map'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DSGO19book3/USMap?rev=' id='28016076' path='/workbooks/DSGO19book3' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Turbine failures.csv+ (Multiple Connections) (2)' name='federated.04svfwc04dsumq14xakfr1tihmib' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.04svfwc04dsumq14xakfr1tihmib'>
+            <column datatype='integer' name='[# of Wind Turbines]' role='measure' type='quantitative' />
+            <column caption='Failure Rate' datatype='real' name='[Calculation_1795880758340349952]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Number of Records])/MAX([# of Wind Turbines])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[State (Turbine population.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State (Turbine population.csv)]' derivation='None' name='[none:State (Turbine population.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1795880758340349952]' derivation='User' name='[usr:Calculation_1795880758340349952:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' />
+              <text column='[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]' />
+              <text column='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' />
+              <lod column='[federated.04svfwc04dsumq14xakfr1tihmib].[none:State (Turbine population.csv):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</rows>
+        <cols>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</cols>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{8A8D9A2D-D39B-4B30-9B4C-C6D04E8E2B25}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DSGO19book3/Dashboard1?rev=' id='28016571' path='/workbooks/DSGO19book3' revision='' />
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97906' id='10' param='horz' w='97538' x='1231' y='1047'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97906' id='7' param='horz' w='97538' x='1231' y='1047'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='97906' id='5' w='97538' x='1231' y='1047'>
+                <zone h='60990' id='3' name='US Map' w='97538' x='1231' y='1047'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='36916' id='8' name='Damage Type' w='34307' x='1231' y='62037'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='36916' id='11' name='Capacity MW Distribution' w='63231' x='35538' y='62037'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='14' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97906' id='15' param='vert' w='97538' x='1231' y='1047'>
+                <zone fixed-size='280' h='60990' id='3' is-fixed='true' name='US Map' w='97538' x='1231' y='1047'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36916' id='8' is-fixed='true' name='Damage Type' w='34307' x='1231' y='62037'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36916' id='11' is-fixed='true' name='Capacity MW Distribution' w='63231' x='35538' y='62037'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F90F23DA-795E-43B5-BEE0-15391F9B1404}' />
+    </dashboard>
+    <dashboard name='Dashboard 2'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DSGO19book3/Dashboard2?rev=' id='28016674' path='/workbooks/DSGO19book3' revision='' />
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97906' id='7' param='horz' w='97538' x='1231' y='1047'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='97906' id='5' w='97538' x='1231' y='1047'>
+              <zone h='97906' id='3' name='Failure Rate' w='97538' x='1231' y='1047'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='8' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97906' id='9' param='vert' w='97538' x='1231' y='1047'>
+                <zone fixed-size='280' h='97906' id='3' is-fixed='true' name='Failure Rate' w='97538' x='1231' y='1047'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A93DCC91-5F34-463D-9AE0-511295E3C110}' />
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Presentation</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/DSGO19book3/Story1?rev=' id='28016675' path='/workbooks/DSGO19book3' revision='' />
+      <style />
+      <size maxheight='900' maxwidth='1016' minheight='900' minwidth='1016' sizing-mode='fixed' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98222' id='1' param='vert' removable='false' w='98426' x='787' y='889'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='3667' id='3' w='98426' x='787' y='889' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='11222' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='98426' x='787' y='4556' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='83333' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='15778'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Everything' captured-sheet='Dashboard 1' id='1'>
+                    <capturedDeltas>
+                      <worksheet name='US Map'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]' field-type='quantitative' max='7309259.8681840105' min='1749476.8105136184' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]' field-type='quantitative' max='-6739385.1955929557' min='-14548069.129385309' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Failure Rate' captured-sheet='Dashboard 2' id='2' />
+                  <story-point caption='California' captured-sheet='Dashboard 1' id='4'>
+                    <capturedDeltas>
+                      <worksheet name='Capacity MW Distribution'>
+                        <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+                          <groupfilter function='member' level='[State (Turbine population.csv)]' member='&quot;CALIFORNIA&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Damage Type'>
+                        <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+                          <groupfilter function='member' level='[State (Turbine population.csv)]' member='&quot;CALIFORNIA&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='US Map'>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[none:State (Turbine population.csv):nk]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Geometry (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>&quot;CALIFORNIA&quot;</value>
+                                <value>140</value>
+                                <value>&quot;MULTIPOLYGON(((-124.2116 41.9985,-123.8215 41.9955,-123.657 41.9951,-123.5179 42.0009,-123.3476 41.9991,-123.146 42.0092,-123.0453 42.0031,-122.6347 42.0049,-122.3782 42.0095,-122.1627 42.0078,-121.4476 41.9975,-120.8795 41.9938,-120.3101 41.9932,-119.9992 41.9945,-119.9983 41.7499,-119.9999 41.184,-119.9988 40.7739,-119.996 40.5706,-119.9972 40.0698,-120.0038 39.4451,-120.0063 39.3165,-120.001 38.9996,-119.5854 38.7132,-119.157 38.4147,-118.7142 38.1021,-118.4281 37.8962,-117.8327 37.4649,-117.5001 37.2204,-117.166 36.9711,-116.4882 36.4591,-115.846 35.9637,-115.6483 35.8092,-115.2597 35.5035,-114.6335 35.0019,-114.6283 34.8636,-114.5923 34.8412,-114.5527 34.7669,-114.4726 34.7136,-114.4509 34.6678,-114.4364 34.5968,-114.3808 34.5297,-114.3867 34.4579,-114.3396 34.4514,-114.2261 34.3659,-114.1769 34.3493,-114.1383 34.3032,-114.1355 34.2579,-114.1645 34.2517,-114.2561 34.1731,-114.287 34.1707,-114.3216 34.1381,-114.4159 34.1076,-114.4354 34.0797,-114.4383 34.0226,-114.535 33.9257,-114.5039 33.8658,-114.5299 33.8576,-114.5281 33.815,-114.5071 33.7679,-114.4965 33.6969,-114.5321 33.6697,-114.5221 33.6113,-114.5406 33.5914,-114.5242 33.5531,-114.558 33.5326,-114.6229 33.4566,-114.6271 33.4335,-114.7242 33.4004,-114.6991 33.3612,-114.7233 33.2881,-114.677 33.2702,-114.6787 33.163,-114.7065 33.0882,-114.6708 33.038,-114.6448 33.0487,-114.5981 33.0254,-114.5165 33.0276,-114.4629 32.9079,-114.469 32.8452,-114.5317 32.7912,-114.5269 32.7571,-114.6156 32.7285,-114.7022 32.7454,-114.7196 32.7188,-115.5134 32.6636,-116.1062 32.6186,-116.6859 32.5715,-117.1239 32.5343,-117.1667 32.6981,-117.2349 32.717,-117.2822 32.8401,-117.2551 32.906,-117.3256 33.1165,-117.4793 33.306,-117.5959 33.3866,-117.7145 33.4599,-117.7862 33.5424,-118.0311 33.6782,-118.106 33.7517,-118.0974 33.7741,-118.2509 33.7702,-118.2983 33.7098,-118.4114 33.741,-118.3905 33.8366,-118.4927 34.0058,-118.5716 34.0415,-118.745 34.0323,-118.8057 34.0003,-118.9449 34.0453,-119.1302 34.1001,-119.2291 34.1599,-119.2822 34.2702,-119.4767 34.3732,-119.5566 34.412,-119.7091 34.3954,-119.8779 34.4069,-120.0078 34.4605,-120.2992 34.4697,-120.4528 34.4456,-120.5114 34.523,-120.6448 34.5806,-120.6004 34.7046,-120.6374 34.7559,-120.6103 34.8582,-120.6708 34.9041,-120.6491 34.9746,-120.6299 35.0615,-120.6511 35.1478,-120.756 35.1604,-120.8976 35.2479,-120.8627 35.3468,-120.9056 35.4484,-121.0037 35.4608,-121.1638 35.6335,-121.2817 35.6669,-121.3473 35.7952,-121.4622 35.8856,-121.5116 36.0066,-121.5735 36.0236,-121.6336 36.1213,-121.7165 36.1948,-121.8356 36.2493,-121.8996 36.307,-121.9371 36.472,-121.9364 36.637,-121.8897 36.6014,-121.8165 36.6768,-121.7883 36.8046,-121.8117 36.8503,-121.8594 36.927,-121.9395 36.9781,-121.9759 36.9541,-122.1058 36.9561,-122.2229 37.0251,-122.2931 37.1071,-122.3296 37.1123,-122.4191 37.2415,-122.4016 37.3607,-122.4702 37.5006,-122.5196 37.5334,-122.5028 37.7081,-122.5134 37.7828,-122.4204 37.8111,-122.357 37.7287,-122.3933 37.7083,-122.3874 37.6295,-122.2025 37.5407,-122.1154 37.4661,-121.9748 37.4607,-122.1051 37.4988,-122.1638 37.6717,-122.2611 37.7402,-122.2434 37.7837,-122.328 37.7985,-122.3125 37.8974,-122.3886 37.9118,-122.4295 37.9646,-122.2441 38.0582,-122.1515 38.0226,-122.0225 38.058,-121.7411 38.0194,-121.6575 38.0558,-121.5816 38.0084,-121.5695 38.0969,-121.7373 38.0851,-121.8039 38.0627,-121.8985 38.0504,-121.911 38.082,-122.0124 38.0936,-122.0627 38.1353,-122.1314 38.0434,-122.2272 38.0651,-122.4061 38.1559,-122.4934 38.1105,-122.495 37.9701,-122.4499 37.8724,-122.5222 37.8854,-122.4789 37.8256,-122.5318 37.8192,-122.6428 37.8974,-122.7026 37.8938,-122.8209 37.9963,-122.9258 38.0303,-122.936 38.0845,-123.013 38.0014,-122.9487 38.1548,-122.9952 38.2409,-122.8825 38.1234,-123.0027 38.2957,-123.0581 38.2982,-123.1291 38.451,-123.3329 38.5653,-123.5187 38.76,-123.6474 38.8455,-123.7376 38.9501,-123.6893 39.0321,-123.7209 39.1353,-123.7708 39.1942,-123.8277 39.3487,-123.8205 39.4396,-123.7728 39.5341,-123.7865 39.6606,-123.8538 39.8341,-124.0232 40.0013,-124.0808 40.0312,-124.1113 40.1042,-124.1879 40.1305,-124.3634 40.261,-124.3489 40.3113,-124.4086 40.4432,-124.3873 40.5105,-124.1882 40.8254,-124.1117 41.0277,-124.1535 41.0536,-124.1584 41.143,-124.1066 41.2307,-124.0652 41.4647,-124.1017 41.6039,-124.1614 41.7375,-124.2558 41.783,-124.2066 41.8992,-124.2116 41.9985)),((-118.606 33.479,-118.3723 33.4101,-118.3103 33.3367,-118.3252 33.2991,-118.4563 33.3218,-118.4888 33.4198,-118.606 33.479)),((-118.594 33.036,-118.4912 32.9285,-118.3676 32.8374,-118.4259 32.8031,-118.4994 32.8518,-118.594 33.036)),((-119.534 33.2847,-119.4217 33.2288,-119.4688 33.2142,-119.5726 33.2583,-119.534 33.2847)),((-119.917 34.0774,-119.7131 34.0434,-119.6313 34.0136,-119.5634 34.0557,-119.5598 33.9954,-119.7147 33.9614,-119.8742 33.98,-119.917 34.0774)),((-120.0546 34.0375,-119.9684 33.9421,-120.1196 33.8942,-120.2377 34.0093,-120.0546 34.0375)),((-120.3658 34.0741,-120.2992 34.0209,-120.4376 34.0383,-120.3658 34.0741)))&quot;</value>
+                                <value>37.25</value>
+                                <value>-119.75</value>
+                                <value>0.020080321285140562</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Illinois' captured-sheet='Dashboard 1' id='5'>
+                    <capturedDeltas>
+                      <worksheet name='Capacity MW Distribution'>
+                        <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+                          <groupfilter function='member' level='[State (Turbine population.csv)]' member='&quot;IOWA&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Damage Type'>
+                        <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+                          <groupfilter function='member' level='[State (Turbine population.csv)]' member='&quot;IOWA&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='US Map'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]' field-type='quantitative' max='6900524.8784346264' min='2189563.7776172385' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]' field-type='quantitative' max='-7422490.2014216045' min='-14039008.486235289' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[none:State (Turbine population.csv):nk]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Geometry (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>&quot;IOWA&quot;</value>
+                                <value>160</value>
+                                <value>&quot;POLYGON((-96.453 43.5004,-95.861 43.5001,-94.9147 43.5004,-94.8546 43.5009,-93.6486 43.4996,-93.0243 43.4997,-92.449 43.5005,-91.2177 43.5005,-91.2322 43.46,-91.2055 43.4229,-91.1977 43.3953,-91.2148 43.3659,-91.1072 43.3136,-91.0579 43.254,-91.1191 43.2004,-91.1562 43.1429,-91.1753 43.1347,-91.1772 43.0802,-91.1568 42.9882,-91.1434 42.9047,-91.1006 42.8831,-91.0941 42.8308,-91.0787 42.8277,-91.0647 42.7509,-90.9524 42.6868,-90.7202 42.6408,-90.6615 42.568,-90.6409 42.5083,-90.654 42.4785,-90.5707 42.4417,-90.555 42.4161,-90.4738 42.3815,-90.4159 42.3227,-90.4309 42.2782,-90.3911 42.2255,-90.3172 42.1936,-90.2095 42.1527,-90.171 42.1252,-90.1542 42.0331,-90.1406 41.996,-90.1649 41.9489,-90.152 41.9289,-90.188 41.8032,-90.2786 41.7674,-90.3161 41.7288,-90.3131 41.6996,-90.3435 41.647,-90.3432 41.5878,-90.4128 41.5653,-90.4614 41.5235,-90.5409 41.5261,-90.5952 41.511,-90.6558 41.4621,-90.7375 41.4501,-90.8576 41.4528,-90.9321 41.4216,-90.9752 41.434,-91.0484 41.4095,-91.072 41.3336,-91.0736 41.3105,-91.1142 41.25,-91.0419 41.1665,-90.9897 41.1557,-90.9463 41.0947,-90.9423 41.0347,-90.9629 40.925,-90.9985 40.9081,-91.0969 40.8114,-91.0925 40.7768,-91.1157 40.7252,-91.1208 40.6728,-91.1853 40.6378,-91.2479 40.6384,-91.3091 40.6254,-91.3599 40.6018,-91.4062 40.5427,-91.3691 40.5125,-91.381 40.4485,-91.3757 40.3919,-91.4194 40.3783,-91.4823 40.3821,-91.4878 40.4039,-91.5246 40.4108,-91.5262 40.4586,-91.5677 40.4623,-91.6169 40.5048,-91.6252 40.5435,-91.6817 40.553,-91.6854 40.5789,-91.7291 40.6136,-91.9431 40.6058,-92.7144 40.5894,-93.3744 40.5803,-93.5569 40.5802,-94.0155 40.5739,-94.4712 40.5708,-94.632 40.5714,-95.7656 40.5852,-95.7513 40.6091,-95.7895 40.6594,-95.8428 40.6775,-95.8832 40.7176,-95.8815 40.7506,-95.8341 40.7838,-95.8478 40.8643,-95.8135 40.9017,-95.8364 40.9216,-95.8321 40.9811,-95.8695 41.0071,-95.8795 41.0533,-95.8624 41.0897,-95.8805 41.1599,-95.8676 41.1884,-95.9235 41.1909,-95.9115 41.229,-95.9126 41.2795,-95.8775 41.2846,-95.8856 41.3181,-95.9252 41.3214,-95.9571 41.3496,-95.9288 41.3701,-95.9378 41.3908,-95.9245 41.4589,-96.004 41.4721,-95.9962 41.507,-96 41.5395,-96.0267 41.5404,-96.0406 41.5069,-96.0919 41.534,-96.0812 41.5743,-96.1136 41.602,-96.0955 41.6459,-96.1226 41.6831,-96.0732 41.7041,-96.1041 41.7294,-96.065 41.7911,-96.1097 41.824,-96.1621 41.903,-96.1366 41.9272,-96.1332 41.9749,-96.1908 41.9808,-96.1881 42.0063,-96.2414 42,-96.2219 42.0296,-96.2729 42.0472,-96.2673 42.1103,-96.3478 42.1668,-96.3566 42.215,-96.3237 42.2299,-96.3564 42.2765,-96.37 42.3109,-96.408 42.3374,-96.4103 42.413,-96.3807 42.4464,-96.402 42.4864,-96.4455 42.4906,-96.4772 42.491,-96.4936 42.5156,-96.477 42.556,-96.499 42.5608,-96.5153 42.6276,-96.5436 42.6613,-96.6289 42.709,-96.6361 42.765,-96.5953 42.7927,-96.5822 42.8336,-96.5519 42.8358,-96.5382 42.9088,-96.5409 42.9243,-96.4987 42.9577,-96.5202 42.9804,-96.4917 43.0098,-96.5109 43.0497,-96.4603 43.0647,-96.4368 43.1197,-96.4606 43.144,-96.4759 43.2215,-96.5581 43.223,-96.555 43.26,-96.5863 43.2743,-96.5799 43.2959,-96.5272 43.305,-96.5222 43.3719,-96.5943 43.4342,-96.5825 43.467,-96.5989 43.5005,-96.453 43.5004))&quot;</value>
+                                <value>42.0</value>
+                                <value>-93.5</value>
+                                <value>0.038600723763570564</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Iowa' captured-sheet='Dashboard 1' id='6'>
+                    <capturedDeltas>
+                      <worksheet name='Capacity MW Distribution'>
+                        <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+                          <groupfilter function='member' level='[State (Turbine population.csv)]' member='&quot;ILLINOIS&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Damage Type'>
+                        <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+                          <groupfilter function='member' level='[State (Turbine population.csv)]' member='&quot;ILLINOIS&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='US Map'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]' field-type='quantitative' max='6900524.8784346264' min='2189563.7776172385' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]' field-type='quantitative' max='-7422490.2014216045' min='-14039008.486235289' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[none:State (Turbine population.csv):nk]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Geometry (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>&quot;ILLINOIS&quot;</value>
+                                <value>76</value>
+                                <value>&quot;POLYGON((-91.4194 40.3783,-91.3757 40.3919,-91.381 40.4485,-91.3691 40.5125,-91.4062 40.5427,-91.3599 40.6018,-91.3091 40.6254,-91.2479 40.6384,-91.1853 40.6378,-91.1208 40.6728,-91.1157 40.7252,-91.0925 40.7768,-91.0969 40.8114,-90.9985 40.9081,-90.9629 40.925,-90.9423 41.0347,-90.9463 41.0947,-90.9897 41.1557,-91.0419 41.1665,-91.1142 41.25,-91.0736 41.3105,-91.072 41.3336,-91.0484 41.4095,-90.9752 41.434,-90.9321 41.4216,-90.8576 41.4528,-90.7375 41.4501,-90.6558 41.4621,-90.5952 41.511,-90.5409 41.5261,-90.4614 41.5235,-90.4128 41.5653,-90.3432 41.5878,-90.3435 41.647,-90.3131 41.6996,-90.3161 41.7288,-90.2786 41.7674,-90.188 41.8032,-90.152 41.9289,-90.1649 41.9489,-90.1406 41.996,-90.1542 42.0331,-90.171 42.1252,-90.2095 42.1527,-90.3172 42.1936,-90.3911 42.2255,-90.4309 42.2782,-90.4159 42.3227,-90.4738 42.3815,-90.555 42.4161,-90.5707 42.4417,-90.654 42.4785,-90.6409 42.5083,-90.4264 42.5071,-90.1574 42.5083,-89.8376 42.5057,-88.9404 42.495,-88.7765 42.492,-88.7074 42.4936,-88.1995 42.4946,-87.8062 42.4926,-87.8054 42.3837,-87.8344 42.3024,-87.7592 42.1524,-87.6815 42.0781,-87.6163 41.8689,-87.5241 41.7092,-87.5268 41.2982,-87.5261 40.737,-87.5264 40.4912,-87.5314 40.148,-87.5332 39.8831,-87.5316 39.3479,-87.5783 39.3403,-87.619 39.3017,-87.6041 39.2595,-87.5788 39.2449,-87.577 39.2111,-87.6287 39.1574,-87.6587 39.136,-87.6184 39.1043,-87.6203 39.0866,-87.5726 39.0573,-87.5735 38.9854,-87.5133 38.956,-87.5229 38.9024,-87.552 38.8603,-87.5311 38.8525,-87.5274 38.8188,-87.4952 38.782,-87.5196 38.6972,-87.5972 38.6653,-87.6515 38.5682,-87.6701 38.5452,-87.6458 38.5091,-87.7446 38.4773,-87.7308 38.4492,-87.7437 38.4144,-87.785 38.368,-87.8061 38.3631,-87.8511 38.2751,-87.8783 38.3078,-87.9068 38.2696,-87.9373 38.2924,-87.9602 38.2371,-87.9879 38.257,-87.9828 38.2067,-87.9109 38.1626,-87.9748 38.1105,-88.0131 38.1035,-88.0047 38.084,-87.9607 38.1002,-87.9672 38.0671,-88.0421 38.0463,-88.0176 38.0347,-88.0126 37.9771,-88.037 37.9563,-88.0134 37.8949,-88.0922 37.8909,-88.028 37.7992,-88.0638 37.7386,-88.1224 37.7097,-88.1594 37.6618,-88.1334 37.5743,-88.069 37.5253,-88.0613 37.5052,-88.0842 37.4727,-88.134 37.4717,-88.2785 37.4533,-88.3581 37.4046,-88.415 37.4234,-88.4763 37.3867,-88.4871 37.3386,-88.5158 37.2839,-88.5109 37.261,-88.448 37.2035,-88.4247 37.1525,-88.4592 37.074,-88.4904 37.068,-88.5656 37.0798,-88.6307 37.1214,-88.7224 37.1412,-88.8056 37.1887,-88.928 37.2265,-88.9723 37.2298,-89.03 37.2112,-89.093 37.1565,-89.1113 37.1191,-89.1719 37.0681,-89.1828 37.0382,-89.167 37.0028,-89.1343 36.9809,-89.1921 36.98,-89.2034 37.0189,-89.2599 37.0641,-89.3077 37.0697,-89.3014 37.045,-89.2576 37.0155,-89.2921 36.9922,-89.3127 37.009,-89.3766 37.0385,-89.389 37.1083,-89.4256 37.1382,-89.4619 37.1995,-89.4607 37.2506,-89.4887 37.2515,-89.5185 37.2863,-89.4861 37.3348,-89.436 37.3444,-89.422 37.3805,-89.4398 37.4372,-89.4712 37.4665,-89.5164 37.5356,-89.5216 37.5722,-89.4784 37.5989,-89.5177 37.6412,-89.512 37.6855,-89.5833 37.7133,-89.6181 37.7498,-89.6679 37.7603,-89.6743 37.8031,-89.7399 37.8469,-89.7975 37.8621,-89.798 37.8797,-89.8448 37.9056,-89.9056 37.8694,-89.9386 37.8743,-89.9742 37.9195,-89.9313 37.9483,-89.9421 37.9701,-90.0084 37.9702,-90.0573 38.0144,-90.0928 38.0173,-90.1308 38.0623,-90.2067 38.088,-90.2527 38.1278,-90.2906 38.1704,-90.3316 38.1876,-90.3639 38.2364,-90.3739 38.2819,-90.3682 38.3403,-90.3376 38.3969,-90.302 38.4246,-90.2662 38.5223,-90.1918 38.599,-90.1813 38.6604,-90.2092 38.7028,-90.2052 38.7322,-90.1664 38.7726,-90.1177 38.8057,-90.1133 38.8493,-90.2758 38.9235,-90.3095 38.9241,-90.3927 38.9591,-90.4508 38.9678,-90.5459 38.874,-90.5823 38.8688,-90.6251 38.8887,-90.6656 38.9342,-90.679 38.9939,-90.7125 39.0571,-90.6827 39.0883,-90.7091 39.1551,-90.727 39.2512,-90.7935 39.3095,-90.921 39.3837,-90.9367 39.3995,-91.0383 39.4484,-91.1009 39.539,-91.1483 39.5458,-91.178 39.5982,-91.2233 39.6176,-91.3067 39.6849,-91.3678 39.729,-91.3651 39.7587,-91.378 39.8113,-91.4329 39.8406,-91.4435 39.8936,-91.4209 39.9149,-91.4355 39.9452,-91.4949 40.0365,-91.4896 40.0574,-91.5108 40.1261,-91.5053 40.2005,-91.4973 40.2488,-91.4621 40.3424,-91.4194 40.3783))&quot;</value>
+                                <value>40.0</value>
+                                <value>-89.25</value>
+                                <value>0.028875379939209727</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Minnesota' captured-sheet='Dashboard 1' id='7'>
+                    <capturedDeltas>
+                      <worksheet name='Capacity MW Distribution'>
+                        <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+                          <groupfilter function='member' level='[State (Turbine population.csv)]' member='&quot;MINNESOTA&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Damage Type'>
+                        <filter class='categorical' column='[federated.04svfwc04dsumq14xakfr1tihmib].[Action (State (Turbine population.csv))]'>
+                          <groupfilter function='member' level='[State (Turbine population.csv)]' member='&quot;MINNESOTA&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='US Map'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]' field-type='quantitative' max='6900524.8784346264' min='2189563.7776172385' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]' field-type='quantitative' max='-7422490.2014216045' min='-14039008.486235289' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[none:State (Turbine population.csv):nk]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Geometry (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Latitude (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[Longitude (generated)]</field>
+                                  <field>[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>&quot;MINNESOTA&quot;</value>
+                                <value>87</value>
+                                <value>&quot;POLYGON((-97.2303 49,-95.1531 49.0001,-95.154 49.3855,-95.0533 49.3526,-94.9561 49.3694,-94.8528 49.3234,-94.8174 49.3202,-94.8255 49.2928,-94.772 49.1193,-94.7496 49.0983,-94.6906 48.917,-94.6857 48.8401,-94.7043 48.8243,-94.6909 48.7781,-94.5872 48.7176,-94.5384 48.7028,-94.4411 48.6942,-94.3889 48.7119,-94.3085 48.7102,-94.2605 48.6964,-94.2546 48.6614,-94.2243 48.6495,-94.0069 48.6432,-93.9544 48.6337,-93.844 48.6294,-93.8053 48.5703,-93.8183 48.5301,-93.7944 48.516,-93.6472 48.5174,-93.542 48.5296,-93.4666 48.5466,-93.465 48.5921,-93.4062 48.6097,-93.3534 48.6127,-93.3473 48.6265,-93.2595 48.642,-93.2058 48.6424,-93.1786 48.6232,-93.0922 48.6278,-92.9831 48.6239,-92.9499 48.6299,-92.9313 48.6073,-92.7298 48.5391,-92.6354 48.5426,-92.6274 48.5033,-92.6988 48.4948,-92.7126 48.4628,-92.6551 48.4361,-92.5076 48.448,-92.4566 48.4003,-92.4767 48.3704,-92.4556 48.3302,-92.4162 48.2965,-92.3753 48.2262,-92.2695 48.2476,-92.2909 48.2662,-92.3058 48.3164,-92.2622 48.3546,-92.2097 48.3458,-92.162 48.3632,-92.1432 48.3556,-92.0552 48.3591,-92.047 48.3346,-92.0005 48.3212,-92.0058 48.2646,-91.9595 48.2345,-91.8937 48.2388,-91.8645 48.2076,-91.7149 48.1998,-91.6993 48.1342,-91.7126 48.115,-91.6536 48.1141,-91.6408 48.0975,-91.5598 48.1094,-91.5679 48.044,-91.4891 48.0691,-91.4505 48.0697,-91.438 48.0496,-91.3729 48.0687,-91.2512 48.0836,-91.0827 48.1808,-91.0316 48.1889,-90.9773 48.2198,-90.8891 48.2453,-90.8385 48.2385,-90.8338 48.1878,-90.7765 48.1604,-90.7957 48.1397,-90.7506 48.0916,-90.6416 48.1035,-90.5833 48.1233,-90.5527 48.0965,-90.4043 48.1055,-90.3449 48.0945,-90.2264 48.1087,-90.1437 48.113,-90.0233 48.0846,-89.994 48.0282,-89.9343 48.0151,-89.8985 47.988,-89.8314 47.9998,-89.8207 48.0152,-89.72 48.0191,-89.7023 48.0065,-89.618 48.0112,-89.5855 48.0011,-89.7947 47.891,-89.9743 47.8305,-90.5371 47.7031,-90.73 47.6275,-91.0231 47.465,-91.1645 47.3715,-91.2886 47.2585,-91.4813 47.1243,-91.5714 47.0913,-91.794 46.9399,-91.8463 46.9231,-92.0861 46.7943,-92.1301 46.7429,-92.1463 46.7159,-92.1891 46.7175,-92.1765 46.6902,-92.2124 46.6499,-92.2922 46.6632,-92.294 46.0744,-92.3353 46.0594,-92.3504 46.0164,-92.4107 46.0273,-92.4423 46.0162,-92.4728 45.973,-92.5252 45.9839,-92.5512 45.9522,-92.6399 45.9335,-92.7064 45.8954,-92.7657 45.8273,-92.7579 45.8112,-92.7846 45.7642,-92.8692 45.7176,-92.8871 45.6441,-92.8837 45.5755,-92.8233 45.5609,-92.7734 45.5682,-92.7261 45.5411,-92.7267 45.5145,-92.6466 45.4416,-92.6503 45.3988,-92.7041 45.3537,-92.699 45.3364,-92.7587 45.291,-92.758 45.2096,-92.7668 45.1855,-92.7449 45.1083,-92.8029 45.0654,-92.762 45.0221,-92.7694 44.9722,-92.7507 44.9373,-92.7731 44.9014,-92.7657 44.841,-92.8056 44.7684,-92.802 44.7457,-92.732 44.7143,-92.6218 44.639,-92.6225 44.6161,-92.5689 44.6034,-92.5399 44.5675,-92.4325 44.5657,-92.3476 44.5572,-92.3162 44.541,-92.2985 44.4946,-92.2211 44.4404,-92.0836 44.4073,-91.96 44.3598,-91.9282 44.3355,-91.9203 44.2865,-91.897 44.2757,-91.893 44.2352,-91.8582 44.193,-91.8173 44.1642,-91.7106 44.1205,-91.6464 44.0633,-91.5826 44.0274,-91.4405 44.0015,-91.3647 43.9349,-91.2841 43.8471,-91.2441 43.7747,-91.2685 43.7098,-91.2687 43.6153,-91.2367 43.5877,-91.2438 43.5491,-91.2177 43.5005,-92.449 43.5005,-93.0243 43.4997,-93.6486 43.4996,-94.8546 43.5009,-94.9147 43.5004,-95.861 43.5001,-96.453 43.5004,-96.4533 43.8496,-96.4515 44.8056,-96.4531 45.2981,-96.4891 45.3571,-96.6198 45.4089,-96.6805 45.4105,-96.7314 45.457,-96.7634 45.52,-96.8568 45.6054,-96.8386 45.6475,-96.7504 45.6988,-96.6727 45.7323,-96.5831 45.82,-96.5637 45.9352,-96.5766 46.0218,-96.5569 46.0646,-96.5592 46.105,-96.5803 46.1517,-96.5836 46.2012,-96.606 46.2939,-96.5998 46.3292,-96.666 46.3746,-96.7135 46.4651,-96.7397 46.487,-96.7504 46.584,-96.783 46.6304,-96.798 46.6303,-96.7811 46.722,-96.7871 46.7857,-96.8025 46.8115,-96.7546 46.9149,-96.7918 46.9285,-96.8232 46.9715,-96.8334 47.0104,-96.8178 47.0523,-96.8163 47.1084,-96.84 47.1505,-96.826 47.1546,-96.8329 47.2376,-96.8442 47.2925,-96.8314 47.3397,-96.8585 47.3679,-96.8395 47.3996,-96.8718 47.4188,-96.8559 47.44,-96.8681 47.4793,-96.8489 47.499,-96.8681 47.5291,-96.8506 47.5542,-96.8512 47.5988,-96.8886 47.6385,-96.8869 47.6722,-96.9301 47.7183,-96.9353 47.7657,-96.9797 47.8094,-97.0054 47.8702,-97.0213 47.8726,-97.0178 47.9198,-97.0546 47.9463,-97.0536 47.9916,-97.0713 48.0458,-97.1095 48.1047,-97.1465 48.1441,-97.1467 48.1732,-97.1229 48.2165,-97.1483 48.2237,-97.1166 48.2797,-97.1355 48.2871,-97.1203 48.3271,-97.1555 48.3638,-97.1633 48.392,-97.1315 48.4066,-97.1293 48.454,-97.1617 48.4762,-97.1456 48.5381,-97.1624 48.5431,-97.1499 48.6125,-97.1185 48.6208,-97.0987 48.6592,-97.1101 48.7062,-97.1373 48.7264,-97.1578 48.8079,-97.1894 48.8144,-97.1739 48.8529,-97.1999 48.8817,-97.1901 48.8958,-97.2343 48.9474,-97.2303 49))&quot;</value>
+                                <value>46.25</value>
+                                <value>-94.25</value>
+                                <value>0.035831960461285006</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{3B2420D8-CA57-420C-9CC9-25C7898BF98F}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' source-height='30'>
+    <window class='worksheet' name='US Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A6439B5A-60FC-4351-A012-9D5239A35658}' />
+    </window>
+    <window class='worksheet' name='Failure Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.04svfwc04dsumq14xakfr1tihmib].[usr:Calculation_1795880758340349952:qk]' type='color' />
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.04svfwc04dsumq14xakfr1tihmib].[none:State:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D0351B45-ADAD-4364-A0FE-7E90D233170C}' />
+    </window>
+    <window class='worksheet' name='Damage Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.04svfwc04dsumq14xakfr1tihmib].[none:Failure type:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.04svfwc04dsumq14xakfr1tihmib].[sum:Number of Records:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.04svfwc04dsumq14xakfr1tihmib].[none:Failure type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4A455590-4BF8-4CF9-BCDF-FD6312A32BBC}' />
+    </window>
+    <window class='worksheet' name='Capacity MW Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.04svfwc04dsumq14xakfr1tihmib].[none:Capacity MW (bin):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{46BFA25E-018F-4B9A-A0CB-6CF0CE63CA14}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Capacity MW Distribution'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Damage Type' />
+        <viewpoint name='US Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{370D4976-ED7F-4193-B159-AFF9B21BAE63}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Failure Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{455771B4-3A79-421F-9287-7B7F3BCAD4A2}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{136EA427-2922-4E65-97FD-49AFE0C5497C}' />
+    </window>
+  </windows>
+</workbook>
